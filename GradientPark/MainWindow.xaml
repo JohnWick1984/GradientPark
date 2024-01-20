@@ -1,0 +1,120 @@
+﻿<Window x:Class="GradientPark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GradientPark"
+        xmlns:rs="crl-namespace:GradientPark.Properties.Strings"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="250" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0">
+            <Label Content="Заповедник Таганай"
+                   Foreground="Green" FontWeight="Bold" FontSize="16" Margin="10,10,-10,-10">
+                <Label.Background>
+                    <ImageBrush ImageSource="C:\Users\Евгений\Documents\Учеба Академия ТОР\WPF\GradientPark\Park.jpg" />
+                </Label.Background>
+            </Label>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" >
+                <StackPanel Width="265" HorizontalAlignment="Left">
+                    <Button x:Name="MainButton">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="{Binding GradientColor1}" Offset="0" />
+                                <GradientStop Color="{Binding GradientColor2}" Offset="0.5" />
+                                <GradientStop Color="{Binding GradientColor3}" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="ServicesButton">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="{Binding GradientColor1}" Offset="0" />
+                                <GradientStop Color="{Binding GradientColor2}" Offset="0.5" />
+                                <GradientStop Color="{Binding GradientColor3}" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="ExcursionButton">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="{Binding GradientColor1}" Offset="0" />
+                                <GradientStop Color="{Binding GradientColor2}" Offset="0.5" />
+                                <GradientStop Color="{Binding GradientColor3}" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="HistoryButton">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="{Binding GradientColor1}" Offset="0" />
+                                <GradientStop Color="{Binding GradientColor2}" Offset="0.5" />
+                                <GradientStop Color="{Binding GradientColor3}" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="NewsButton">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="{Binding GradientColor1}" Offset="0" />
+                                <GradientStop Color="{Binding GradientColor2}" Offset="0.5" />
+                                <GradientStop Color="{Binding GradientColor3}" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="ContactsButton">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="{Binding GradientColor1}" Offset="0" />
+                                <GradientStop Color="{Binding GradientColor2}" Offset="0.5" />
+                                <GradientStop Color="{Binding GradientColor3}" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Button.Foreground>
+                    </Button>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+                        <Button Content="Русский" Click="RuButton_Click" />
+                        <Button Content="French" Click="FrenchButton_Click" />
+                        <Button Content="Spanish" Click="SpanishButton_Click" />
+                        <Button Content="Indonesian" Click="IndButton_Click" />
+                        
+
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" >
+                <Grid>
+                    <TextBox Text="Национальный парк Таганай находится в одном из уникальнейших уголков Южного Урала - в районе Таганайского горного узла, чуть севернее старинного Уральского города Златоуста. Через парк проходит географическая граница Европы и Азии. Размеры парка: с юга на север – 52 км, с запада на восток в среднем 10-15 км. Общая площадь парка составляет 568 км² (56,8 тыс.  Географические координаты территории: 55°08' - 55°33' с.ш., 59°34' - 60°02' в.д.)"
+         TextWrapping="Wrap" AcceptsReturn="True" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
